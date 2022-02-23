@@ -13,6 +13,7 @@ export default function Form(props) {
 
     const onSubmit = (e) => {
         e.prevent.default();
+        
         submit();
         console.log('submitted')
     };
