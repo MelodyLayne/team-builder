@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from './axios';
 import Form from './Components/Form';
-import Team from'./Components/Team';
+import Team from './Components/Team';
 import './App.css';
 
 const initialFormValues = {
@@ -34,15 +34,12 @@ export default function App() {
             return;
         }
 
-        axios.post(
-            'fakeapi.com',
-            newTeamMember.then((res) => {
-                console.log(res.data);
-                setTeamMembers([res.data, ...teamMembers]);
-                setFormValues(initialFormValues);
-                setErrors('');
-            })
-        );
+        axios.post('fakeapi.com', newTeamMember).then((res) => {
+            console.log(res.data);
+            setTeamMembers([res.data, ...teamMembers]);
+            setFormValues(initialFormValues);
+            setErrors('');
+        });
     };
 
     useEffect(() => {

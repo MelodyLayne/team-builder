@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './team.css'
 export default function Team(props) {
   const {details} = props;
 
@@ -8,7 +8,7 @@ export default function Team(props) {
   }
 
   return (
-    <div className='team-container'>
+    <div className='team'>
       <h3>Name: {details.name}</h3>
       <p>Email: {details.email}</p>
       <p>Role: {details.role}</p>

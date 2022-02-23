@@ -4,7 +4,7 @@ const initialTeamList = [
   {
     id: uuid(),
     name: 'Bilbo',
-    email: 'bible@theshire.com',
+    email: 'biblo@theshire.com',
     role: 'Rogue'
   }
 ]

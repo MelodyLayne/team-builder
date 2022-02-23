@@ -11,16 +11,15 @@ export default function Form(props) {
         update(name, value);
     };
 
-    const onSubmit = (e) => {
-        e.prevent.default();
-        
+    const onSubmit = (evt) => {
+        evt.preventDefault();
         submit();
         console.log('submitted')
     };
 
     return (
         //this is the built out form that uses props from the App.js file to create a new person to add.
-        <div className='form' onSubmit={onSubmit}>
+        <form className='form' onSubmit={onSubmit}>
             <div className='title'>Let's go on an Adventure!</div>
             <label>
                 Team Member Name
@@ -54,6 +53,6 @@ export default function Form(props) {
                 </select>
             </label>
             <button type='submit'>Add to your party</button>
-        </div>
+        </form>
     );
 }
